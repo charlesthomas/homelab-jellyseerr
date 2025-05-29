@@ -6,22 +6,22 @@ helm: false
 homepageDescription: Media Requester
 homepageEnabled: true
 homepageGroup: media
-homepageIcon: jellyseer
-homepageName: Jellyseer
+homepageIcon: jellyseerr
+homepageName: Jellyseerr
 ingClass: nginx-external
 ingCname: crt.lol
 ingExtraAnnotations: ''
 ingHost: trl.crt.lol
-ingName: jellyseer
+ingName: jellyseerr
 ingPathType: Prefix
 ingWebSockets: false
 ingress: true
-labels: 'app: jellyseer'
-name: jellyseer
-namespace: jellyseer
+labels: 'app: jellyseerr'
+name: jellyseerr
+namespace: jellyseerr
 pvc: true
 pvcAccessMode: ReadWriteOnce
-pvcName: jellyseer
+pvcName: jellyseerr
 pvcSize: 5Gi
 pvcStorageClass: longhorn-retain
 reloader: true
@@ -35,7 +35,7 @@ resources:
 - statefulsets.yaml
 service: false
 serviceAccount: false
-svcName: jellyseer
+svcName: jellyseerr
 svcPortNum: 5055
 upstreamURL: https://jellyseerr.dev
-url: https://github.com/charlesthomas/homelab-jellyseer
+url: https://github.com/charlesthomas/homelab-jellyseerr
