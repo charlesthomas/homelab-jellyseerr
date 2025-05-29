@@ -15,6 +15,10 @@ spec:
       labels:
         app: jellyseerr
     spec:
+      dnsConfig:
+        nameservers:
+        - 10.43.0.10
+      dnsPolicy: None
       containers:
       - name: jellyseerr
         image: jellyseerr
@@ -36,7 +40,7 @@ spec:
         - name: DB_TYPE
           value: postgres
         - name: DB_HOST
-          value: postgres.jellyseerr.svc
+          value: postgres.jellyseerr.svc.cluster.local
         - name: DB_NAME
           value: jellyseerr
         - name: PUID
