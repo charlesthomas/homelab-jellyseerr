@@ -1,0 +1,41 @@
+_commit: v1.12.1-9-g5863ce6
+_src_path: /Users/crthomas/code/charlesthomas/homelab-template
+additionalResources: ''
+backups: false
+helm: false
+homepageDescription: Media Requester
+homepageEnabled: true
+homepageGroup: media
+homepageIcon: jellyseer
+homepageName: Jellyseer
+ingClass: nginx-external
+ingCname: crt.lol
+ingExtraAnnotations: ''
+ingHost: trl.crt.lol
+ingName: jellyseer
+ingPathType: Prefix
+ingWebSockets: false
+ingress: true
+labels: 'app: jellyseer'
+name: jellyseer
+namespace: jellyseer
+pvc: true
+pvcAccessMode: ReadWriteOnce
+pvcName: jellyseer
+pvcSize: 5Gi
+pvcStorageClass: longhorn-retain
+reloader: true
+resources:
+- deployments.yaml
+- external-secrets.yaml
+- ingresses.yaml
+- pvcs.yaml
+- service-accounts.yaml
+- services.yaml
+- statefulsets.yaml
+service: false
+serviceAccount: false
+svcName: jellyseer
+svcPortNum: 5055
+upstreamURL: https://jellyseerr.dev
+url: https://github.com/charlesthomas/homelab-jellyseer
