@@ -23,12 +23,12 @@ spec:
         - name: jellyseerr
           containerPort: 5055
         env:
-        - name: POSTGRES_PASSWORD
+        - name: DB_PASS
           valueFrom:
             secretKeyRef:
               name: postgres
               key: password
-        - name: POSTGRES_USER
+        - name: DB_USER
           valueFrom:
             secretKeyRef:
               name: postgres
