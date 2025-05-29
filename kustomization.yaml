@@ -17,6 +17,14 @@ resources:
 - resources/service-accounts.yaml
 - resources/services.yaml
 - resources/statefulsets.yaml
+
+images:
+  - name: postgres
+    newTag: 17-alpine
+  - name: jellyseerr
+    newName: fallenbagel/jellyseerr
+    newTag: 2.5.2
+
 patches:
 - patch: |-
     apiVersion: apps/v1
