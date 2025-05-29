@@ -1,12 +1,12 @@
 ---
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: jellyseer
+namespace: jellyseerr
 
 commonAnnotations:
-  repo: https://github.com/charlesthomas/homelab-jellyseer
+  repo: https://github.com/charlesthomas/homelab-jellyseerr
 commonLabels:
-  app: jellyseer
+  app: jellyseerr
 
 resources:
 - resources/deployments.yaml
@@ -31,7 +31,7 @@ patches:
     kind: Deployment
     metadata:
       name: all
-      namespace: jellyseer
+      namespace: jellyseerr
       annotations:
         reloader.stakater.com/auto: "true"
   target:
@@ -41,7 +41,7 @@ patches:
     kind: StatefulSet
     metadata:
       name: all
-      namespace: jellyseer
+      namespace: jellyseerr
       annotations:
         reloader.stakater.com/auto: "true"
   target:
@@ -50,15 +50,15 @@ patches:
     apiVersion: networking.k8s.io/v1
     kind: Ingress
     metadata:
-      name: jellyseer
-      namespace: jellyseer
+      name: jellyseerr
+      namespace: jellyseerr
       annotations:
         gethomepage.dev/href: https://trl.crt.lol
         gethomepage.dev/enabled: "true"
         gethomepage.dev/description: Media Requester
         gethomepage.dev/group: media
-        gethomepage.dev/icon: jellyseer
-        gethomepage.dev/name: Jellyseer
+        gethomepage.dev/icon: jellyseerr
+        gethomepage.dev/name: Jellyseerr
         gethomepage.dev/pod-selector: ""
   target:
     kind: Ingress
