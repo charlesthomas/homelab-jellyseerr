@@ -56,7 +56,7 @@ patches:
         gethomepage.dev/href: https://trl.crt.lol
         gethomepage.dev/enabled: "true"
         gethomepage.dev/description: Media Requester
-        gethomepage.dev/group: media
+        gethomepage.dev/group: Media
         gethomepage.dev/icon: jellyseerr
         gethomepage.dev/name: Jellyseerr
         gethomepage.dev/pod-selector: ""
