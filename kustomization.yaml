@@ -23,7 +23,7 @@ images:
     newTag: 17-alpine
   - name: jellyseerr
     newName: fallenbagel/jellyseerr
-    newTag: 2.5.2
+    newTag: 2.6.0
 
 patches:
 - patch: |-
