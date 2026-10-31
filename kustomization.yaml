@@ -5,8 +5,10 @@ namespace: jellyseerr
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-jellyseerr
-commonLabels:
-  app: jellyseerr
+labels:
+- includeSelectors: true
+  pairs:
+    app: jellyseerr
 
 resources:
 - resources/deployments.yaml
@@ -62,3 +64,11 @@ patches:
         gethomepage.dev/pod-selector: ""
   target:
     kind: Ingress
+configMapGenerator:
+- name: grafana-dashboard-jellyseerr
+  files:
+  - grafana/jellyseerr.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      grafana_dashboard: "1"
