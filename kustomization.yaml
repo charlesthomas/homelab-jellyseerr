@@ -5,8 +5,10 @@ namespace: jellyseerr
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-jellyseerr
-commonLabels:
-  app: jellyseerr
+labels:
+- includeSelectors: true
+  pairs:
+    app: jellyseerr
 
 resources:
 - resources/deployments.yaml
